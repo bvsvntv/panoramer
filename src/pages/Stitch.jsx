@@ -171,7 +171,7 @@ export default function Stitch() {
 								role="list"
 								className="space-y-4 pb-6 text-sm font-medium text-gray-400"
 							>
-								<li className="space-y-4">
+								<li className="mt-8 space-y-4">
 									<button
 										disabled={!apiEndpoint ? true : false}
 										onClick={handleUpload}
