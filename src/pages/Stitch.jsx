@@ -155,6 +155,7 @@ export default function Stitch() {
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
             <form className="hidden lg:block">
               <FilePond
+                disabled={!apiEndpoint ? true : false}
                 files={files}
                 onupdatefiles={(fileItems) => {
                   const newFiles = fileItems.map((fileItem) => fileItem.file);
@@ -171,33 +172,33 @@ export default function Stitch() {
                 className="space-y-4 pb-6 text-sm font-medium text-gray-400"
               >
                 <li className="space-y-4">
-                  <a
-                    href="#"
+                  <button
+                    disabled={!apiEndpoint ? true : false}
                     onClick={handleUpload}
-                    className="flex justify-center gap-2 items-center px-4 py-3 bg-[#53B5FF]/95 rounded-full font-medium text-gray-100 text-center"
+                    className="w-full flex justify-center gap-2 items-center px-4 py-3 bg-[#53B5FF]/95 rounded-full font-medium text-gray-100 text-center"
                   >
                     {isUploading ? <Spinner /> : <span>Upload</span>}
-                  </a>
+                  </button>
 
-                  <a
-                    href="#"
+                  <button
+                    disabled={!apiEndpoint ? true : false}
                     onClick={handleGeneratePanorama}
-                    className="flex justify-center gap-2 items-center px-4 py-3 bg-[#53B5FF]/95 rounded-full font-medium text-gray-100 text-center"
+                    className="w-full flex justify-center gap-2 items-center px-4 py-3 bg-[#53B5FF]/95 rounded-full font-medium text-gray-100 text-center"
                   >
                     {isGenerating ? (
                       <Spinner />
                     ) : (
                       <span>Generate Panorama</span>
                     )}
-                  </a>
+                  </button>
 
-                  <a
-                    href="#"
+                  <button
+                    disabled={!apiEndpoint ? true : false}
                     onClick={handleClear}
-                    className="flex justify-center gap-2 items-center px-4 py-3 bg-[#53B5FF]/95 rounded-full font-medium text-gray-100 text-center"
+                    className="w-full flex justify-center gap-2 items-center px-4 py-3 bg-[#53B5FF]/95 rounded-full font-medium text-gray-100 text-center"
                   >
                     {isClearing ? <Spinner /> : <span>Clear</span>}
-                  </a>
+                  </button>
                 </li>
               </ul>
 
