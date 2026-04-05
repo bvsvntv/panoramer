@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Inter;
-  src: url("./assets/fonts/Inter-roman.var.woff2");
+	font-family: Inter;
+	src: url('./assets/fonts/Inter-roman.var.woff2');
 }
