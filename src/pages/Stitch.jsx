@@ -200,6 +200,10 @@ export default function Stitch() {
                   </a>
                 </li>
               </ul>
+
+              {!apiEndpoint &&
+                <p className="text-xs font-semibold text-red-500">Note: All features are disabled as API is not available!</p>
+              }
             </form>
 
             <div className="lg:col-span-3">
